@@ -35,6 +35,13 @@ public class SimpleCalculatorTest {
 
 	@Test
 	public void testDivideByZero() {
-		assertThrows(ArithmeticException.class, ()->calc.divide(10, 0));
+		int[] x = null;
+		try {
+			calc.divide(10, 0);
+			fail("didn't throw");
+		} catch (ArithmeticException e) {
+			
+		}
+		
 	}
 }
